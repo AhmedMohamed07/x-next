@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex justify-between max-w-6xl">
-          <div>
+        <div className="flex justify-between max-w-6xl mx-auto ">
+          <div className="border-r hidden sm:inline h-screen">
             <Sidebar />
           </div>
 
