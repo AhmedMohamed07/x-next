@@ -21,12 +21,12 @@ export default function RootLayout({
     <SessionWrapper>
       <html lang="en">
         <body className={inter.className}>
-          <div className="flex justify-between max-w-6xl mx-auto ">
+          <div className="flex max-w-6xl mx-auto ">
             <div className="border-r hidden sm:inline h-screen">
               <Sidebar />
             </div>
 
-            <div className="flex-1">{children}</div>
+            <div className="flex-1 max-w-2xl">{children}</div>
 
             <div className="hidden lg:flex lg:flex-col w-[24rem] h-screen p-3">
               <div className="static top-0 py-2 bg-white">
