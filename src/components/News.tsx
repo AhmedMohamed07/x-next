@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { myLoader } from './MyLoder';
 
 interface Artical {
   title: string;
@@ -13,22 +14,9 @@ interface Artical {
   };
 }
 
-const myLoader = ({
-  src,
-  width,
-  quality,
-}: {
-  src: string;
-  width: number;
-  quality?: number;
-}): string => {
-  return `${src}?w=${width}&q=${quality || 75}`;
-};
 const News = () => {
   const [news, setNews] = useState([]);
   const [articleNum, setArticle] = useState(3);
-  console.log(news);
-  // console.log(news.slice(0, 3));
 
   useEffect(() => {
     fetch(
@@ -54,7 +42,6 @@ const News = () => {
                 {article.source.name}
               </span>
             </div>
-            {/* article.urlToImage.replace(/"/g, '') */}
 
             <Image
               loader={myLoader}
