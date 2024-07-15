@@ -52,7 +52,7 @@ const Sidebar = () => {
             src={session.user?.image || ''}
             alt="user logo"
             width={50}
-            height={30}
+            height={50}
             loader={myLoader}
             className="rounded-full"
           />
