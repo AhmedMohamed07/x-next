@@ -1,4 +1,5 @@
 import Input from '@/components/Input';
+import Feed from '@/components/Feed';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       </h1>
       <div>
         <Input />
+        <Feed />
       </div>
     </div>
   );
