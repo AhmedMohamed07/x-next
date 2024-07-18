@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import { myLoader } from './MyLoder';
+import Icons from '@/components/Icons';
 
 interface PostProps {
   post: {
@@ -18,7 +19,7 @@ interface PostProps {
 
 export default function Post({ post, id }: PostProps) {
   return (
-    <div className="flex p-3 border-b border-gray-200 hover:bg-gray-200 cursor-pointer">
+    <div className="flex p-3 border-b border-gray-200 hover:bg-gray-50 cursor-pointer">
       <Image
         src={post?.profileImg}
         alt="user-img"
@@ -29,7 +30,7 @@ export default function Post({ post, id }: PostProps) {
       />
       <div className="flex-1">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-1 whitespace-nowrap">
+          <div className=" flex flex-col items-start justify-start space-x-1 whitespace-nowrap sm:flex-row sm:items-center">
             <h4 className="font-bold text-sx truncate">{post?.name}</h4>
             <span className="text-xs truncate">@{post?.username}</span>
           </div>
@@ -51,6 +52,7 @@ export default function Post({ post, id }: PostProps) {
             />
           )}
         </Link>
+        <Icons />
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <div className="flex max-w-6xl mx-auto ">
-            <div className="border-r hidden sm:inline h-screen">
+            <div className="border-r hidden sm:inline h-screen sticky top-0">
               <Sidebar />
             </div>
 
