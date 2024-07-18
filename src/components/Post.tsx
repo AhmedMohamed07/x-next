@@ -13,6 +13,7 @@ interface PostProps {
     username: string;
     text: string;
     image?: string;
+    uid: string;
   };
   id: string;
 }
@@ -52,7 +53,7 @@ export default function Post({ post, id }: PostProps) {
             />
           )}
         </Link>
-        <Icons id={id} />
+        <Icons id={id} uid={post.uid} />
       </div>
     </div>
   );
