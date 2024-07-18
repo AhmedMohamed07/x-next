@@ -31,7 +31,7 @@ export default function Post({ post, id }: PostProps) {
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <div className=" flex flex-col items-start justify-start space-x-1 whitespace-nowrap sm:flex-row sm:items-center">
-            <h4 className="font-bold text-sx truncate">{post?.name}</h4>
+            <h4 className="font-bold text-sm truncate">{post?.name}</h4>
             <span className="text-xs truncate">@{post?.username}</span>
           </div>
           <HiDotsHorizontal className="text-sm" />
@@ -52,7 +52,7 @@ export default function Post({ post, id }: PostProps) {
             />
           )}
         </Link>
-        <Icons />
+        <Icons id={id} />
       </div>
     </div>
   );
