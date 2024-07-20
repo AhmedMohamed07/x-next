@@ -11,6 +11,7 @@ const { useSession } = require('next-auth/react');
 import { app } from '../firebase';
 import { PostDetails } from '@/types';
 import Image from 'next/image';
+import { myLoader } from './MyLoder';
 
 export default function CommentModal() {
   const [open, setOpen] = useRecoilState(modalState);
@@ -57,6 +58,7 @@ export default function CommentModal() {
                 src={post?.profileImg || ''}
                 width={10}
                 height={10}
+                loader={myLoader}
                 alt="user-img"
                 className="h-11 w-11 rounded-full mr-4"
               />
@@ -75,6 +77,7 @@ export default function CommentModal() {
                 src={session.user.image}
                 height={10}
                 width={10}
+                loader={myLoader}
                 alt="user-img"
                 className="h-11 w-11 rounded-full cursor-pointer hover:brightness-95"
               />
