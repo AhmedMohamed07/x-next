@@ -5,18 +5,7 @@ import Link from 'next/link';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import { myLoader } from './MyLoder';
 import Icons from '@/components/Icons';
-
-interface PostProps {
-  post: {
-    profileImg: string;
-    name: string;
-    username: string;
-    text: string;
-    image?: string;
-    uid: string;
-  };
-  id: string;
-}
+import { PostProps } from '@/types';
 
 export default function Post({ post, id }: PostProps) {
   return (

@@ -4,15 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { myLoader } from './MyLoder';
-
-interface Artical {
-  title: string;
-  url: string;
-  urlToImage: string;
-  source: {
-    name: string;
-  };
-}
+import { Artical } from '@/types';
 
 const News = () => {
   const [news, setNews] = useState([]);

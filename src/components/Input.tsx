@@ -18,12 +18,8 @@ import {
   getFirestore,
   serverTimestamp,
 } from 'firebase/firestore';
-import { revalidatePath } from 'next/cache';
+import { ExtendedUser } from '@/types';
 
-interface ExtendedUser {
-  username?: string;
-  uid?: string;
-}
 const Input = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [imageFileUrl, setImageFileUrl] = useState<string | null>(null);

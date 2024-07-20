@@ -7,11 +7,7 @@ import Link from 'next/link';
 import { BsTwitterX } from 'react-icons/bs';
 import { HiHome } from 'react-icons/hi';
 import { myLoader } from './MyLoder';
-
-interface ExtendedUser {
-  username?: string;
-  uid?: string;
-}
+import { ExtendedUser } from '@/types';
 
 const Sidebar = () => {
   const { data: session } = useSession();
