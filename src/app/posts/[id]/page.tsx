@@ -3,6 +3,7 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { HiArrowLeft } from 'react-icons/hi';
 import Link from 'next/link';
 import Post from '@/components/Post';
+import Comments from '@/components/Comments';
 import { PostDetails, PostWithID } from '@/types';
 
 interface Params {
@@ -44,6 +45,7 @@ export default async function PostPage({ params }: { params: Params }) {
         <h2 className="sm:text-lg">Back</h2>
       </div>
       <Post post={data} id={data.id} />
+      <Comments id={params.id} />
     </div>
   );
 }

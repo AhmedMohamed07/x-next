@@ -17,6 +17,7 @@ export default function Post({ post, id }: PostWithID) {
         height={10}
         className="h-11 w-11 rounded-full mr-4"
         loader={myLoader}
+        priority={true}
       />
       <div className="flex-1">
         <div className="flex items-center justify-between">

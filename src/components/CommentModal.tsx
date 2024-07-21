@@ -80,7 +80,7 @@ export default function CommentModal() {
             <div className="p-2 flex items-center space-x-1 relative">
               <span className="w-0.5 h-full z-[-1] absolute left-8 top-11 bg-gray-300" />
               <Image
-                src={post?.profileImg || ''}
+                src={post?.profileImg!}
                 width={10}
                 height={10}
                 loader={myLoader}
