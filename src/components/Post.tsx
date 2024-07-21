@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import { myLoader } from './MyLoder';
 import Icons from '@/components/Icons';
-import { PostProps } from '@/types';
+import { PostWithID } from '@/types';
 
-export default function Post({ post, id }: PostProps) {
+export default function Post({ post, id }: PostWithID) {
   return (
     <div className="flex p-3 border-b border-gray-200 hover:bg-gray-50 cursor-pointer">
       <Image

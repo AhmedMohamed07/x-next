@@ -1,4 +1,4 @@
-export interface PostProps {
+export interface PostWithID {
   post: {
     profileImg: string;
     name: string;
