@@ -9,32 +9,26 @@ import { HiHome } from 'react-icons/hi';
 import { myLoader } from './MyLoder';
 import { ExtendedUser } from '@/types';
 
-const Sidebar = () => {
+const Navbar = () => {
   const { data: session } = useSession();
 
   return (
-    <div className="hidden sm:flex sm:flex-col sm:justify-between  p-3 h-screen sticky top-0">
-      <div className="space-y-4 flex flex-col items-center lg:items-start">
+    <div className="flex sm:hidden justify-between items-center  p-3 h-20 w-full sticky bottom-0 bg-white border">
+      <div className=" flex justify-between w-full items-center">
         <Link href={'/'}>
           <BsTwitterX className="w-16 h-16 hover:bg-slate-100 rounded-full p-3 cursor-pointer transition-all duration-200" />
         </Link>
-        <Link
-          href={'/'}
-          className="flex items-center gap-2 text-xl hover:bg-slate-100 rounded-full p-3 cursor-pointer transition-all duration-200 w-fit "
-        >
-          <HiHome className="w-7 h-7" />
-          <span className="font-bold hidden xl:inline">Home</span>
-        </Link>
+
         {session ? (
           <button
-            className="hidden px-2 py-1 sm:inline bg-blue-400 text-white font-bold lg:px-4 lg:py-2 mt-4 hover:bg-blue-600 transition-all duration-200 rounded-full h-10"
+            className=" px-2 py-1 inline bg-blue-400 text-white font-bold hover:bg-blue-600 transition-all duration-200 rounded-full h-10"
             onClick={() => signOut()}
           >
             Sign Out
           </button>
         ) : (
           <button
-            className="hidden px-2 py-1 sm:inline bg-blue-400 text-white font-bold lg:px-4 lg:py-2 mt-4 hover:bg-blue-600 transition-all duration-200 rounded-full h-10"
+            className=" px-2 py-1 inline bg-blue-400 text-white font-bold hover:bg-blue-600 transition-all duration-200 rounded-full h-10"
             onClick={() => signIn()}
           >
             Sign In
@@ -65,4 +59,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Navbar;

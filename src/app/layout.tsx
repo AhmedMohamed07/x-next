@@ -5,6 +5,7 @@ import Sidebar from '@/components/Sidebar';
 import News from '@/components/News';
 import SessionWrapper from '@/components/SessionWrapper';
 import CommentModal from '@/components/CommentModal';
+import Navbar from '@/components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
               <News />
             </div>
           </div>
+          <Navbar />
           <CommentModal />
         </body>
       </html>
